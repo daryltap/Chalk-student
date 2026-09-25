@@ -29,6 +29,8 @@ npm run build && npm start
 npm run seed
 ```
 
+On Vercel, SQLite uses `/tmp/chalk.db` when `DATABASE_PATH` is not set. That directory is writable but ephemeral, so data can be lost between function instances. Set `DATABASE_PATH` to a persistent external database before using Vercel for real data.
+
 ## Run with Docker
 
 ```bash
